@@ -30,7 +30,7 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }),
       terser(),
       postcss(),
-      babel({ babelHelpers: 'bundled', exclude: 'node_modules/**' })
+      babel({ babelHelpers: 'bundled' })
     ]
   },
   {
