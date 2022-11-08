@@ -30,13 +30,13 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }),
       terser(),
       postcss(),
-      babel({ babelHelpers: 'bundled' })
+      babel({ babelHelpers: 'bundled', compact: true })
     ]
   },
   {
-    input: 'dist/esm/types/src/index.d.ts',
+    input: 'dist/esm/src/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-    external: [/\.(sc|sa|c)ss$/]
+    external: [/\.css$/]
   }
 ]
