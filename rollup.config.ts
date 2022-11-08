@@ -27,16 +27,19 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
+      typescript({
+        tsconfig: './tsconfig.json'
+      }),
       terser(),
       postcss(),
       babel({ babelHelpers: 'bundled', compact: true })
-    ]
+    ],
+    external: ['react', 'react-dom']
   },
   {
     input: 'dist/esm/src/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-    external: [/\.css$/]
+    external: [/.css$/]
   }
 ]
