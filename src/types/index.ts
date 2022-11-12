@@ -22,15 +22,4 @@ export type Options = {
   component?: (arg: { message: string; type: TypeName }) => React.ReactNode
 }
 
-export type NotifyProviderProps = {
-  type: TypeName
-  message: string
-  options?: Options
-  openNotify: boolean
-  notifyWarn: (message: string, options?: Options) => void
-  notifyInfo: (message: string, options?: Options) => void
-  notifyError: (message: string, options?: Options) => void
-  notifySuccess: (message: string, options?: Options) => void
-}
-
 export type NotifyProps = OnNotify & { openNotify: boolean }
