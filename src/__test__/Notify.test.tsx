@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import { NotifyProps } from '../types'
-import { Notify } from '../components/notify'
+import { NotifyProps } from 'types'
+import Notify from 'components/notification'
 
 const props: NotifyProps = {
   message: 'Notification',
