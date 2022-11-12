@@ -1,5 +1,4 @@
-import { Notify } from './components/notify'
-import { useNotify } from './hooks/useNotify'
-import { NotifyProvider } from './context/notifyContext'
+import Notify from 'components/notification'
+import { useNotify } from 'hooks/useNotify'
 
-export { Notify, useNotify, NotifyProvider }
+export { Notify, useNotify }

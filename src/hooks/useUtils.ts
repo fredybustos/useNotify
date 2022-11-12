@@ -33,7 +33,7 @@ export default function useUtils({ open, options, setOpen }: UseUtils) {
   return { container }
 }
 
-const createContainer = () => {
+export const createContainer = () => {
   const portalId = 'notifyContainer'
   let element = document.getElementById(portalId)
 
