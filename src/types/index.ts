@@ -13,13 +13,36 @@ export type OnNotify = {
   message: string
   options?: Options
   type: TypeName
+  id: number
 }
 
 export type Options = {
   duration?: number
-  position?: Position
+  bgcolor?: string
+  color?: string
+  rounded?: string
+  position: Position | 'top'
   onClose?: (event: React.MouseEvent<SVGSVGElement>) => void
-  component?: (arg: { message: string; type: TypeName }) => React.ReactNode
+  component?: (arg: NotifyProps) => React.ReactNode
 }
 
-export type NotifyProps = OnNotify & { openNotify: boolean }
+export type NotifyInitialProps = {
+  notification: OnNotify
+  container: HTMLElement
+  openNotify: boolean
+}
+
+export interface NotificationProps extends OnNotify {
+  open: boolean
+  setOpen: (arg: boolean) => void
+  container: HTMLElement
+}
+
+export type UseToastProps = {
+  options?: Options
+  id: number
+  open: boolean
+  setOpen: (arg: boolean) => void
+  container: HTMLElement
+}
+export type NotifyProps = Omit<OnNotify, 'id'>
