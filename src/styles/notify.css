@@ -52,27 +52,27 @@
 }
 
 .default-top {
-  top: -50px;
+  top: -15px;
   left: calc(50% - 175px);
 }
 .default-top_right {
-  right: -50px;
+  right: -15px;
 }
 .default-top_left {
-  left: -50px;
+  left: -15px;
 }
 
 .default-bottom {
-  bottom: -50px;
+  bottom: -15px;
   left: calc(50% - 175px);
 }
 .default-bottom_right {
   bottom: 10px;
-  right: -50px;
+  right: -15px;
 }
 .default-bottom_left {
   bottom: 10px;
-  left: -50px;
+  left: -15px;
 }
 
 .position-top {
