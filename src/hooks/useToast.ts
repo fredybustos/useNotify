@@ -46,7 +46,16 @@ export default function useToast({
     }
   }, [open])
 
-  const closeNotify = () => {
+  const closeNotify = (event?: React.MouseEvent<SVGSVGElement>) => {
+    if (options?.onClose) {
+      options.onClose(event)
+      handleClose()
+      return
+    }
+    handleClose()
+  }
+
+  const handleClose = () => {
     setOpen(false)
     const childRects = container?.children[0]?.getBoundingClientRect()
     const styles = INITIAL_STYLES[position](id, childRects)

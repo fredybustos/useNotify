@@ -1,6 +1,6 @@
 {
   "name": "@fredybustos/usenotify",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "scripts": {
     "dev": "rollup -c -w",
@@ -9,7 +9,7 @@
     "lint": "eslint -c .eslintrc.json . --ext .ts,tsx,js,jsx --fix"
   },
   "author": "Fredy Bustos",
-  "license": "ISC",
+  "license": "MIT",
   "publishConfig": {
     "@fredybustos:registry": "https://npm.pkg.github.com"
   },

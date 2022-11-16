@@ -22,7 +22,7 @@ export type Options = {
   color?: string
   rounded?: string
   position: Position | 'top'
-  onClose?: (event: React.MouseEvent<SVGSVGElement>) => void
+  onClose?: (event?: React.MouseEvent<SVGSVGElement>) => void
   component?: (arg: NotifyProps) => React.ReactNode
 }
 
