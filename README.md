@@ -1,6 +1,16 @@
 # useNotify 
 
 useNotify is a component to easily display notifications. 
+This package use **React > 18** and **ReactDom > 18**. [ReactDom 18](https://es.reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html) change the render application way. Only needs to update method render.
+```js
+// Before
+import { render } from 'react-dom';
+render(<App tab="home" />, domElement);
+
+// After
+import { createRoot } from 'react-dom/client';
+createRoot(domElement).render(<App tab="home" />)
+```
 
 ## Installation
 
