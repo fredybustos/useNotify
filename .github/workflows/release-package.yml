@@ -25,7 +25,7 @@ jobs:
           path: dist
           
   release:
-    needs: [linter, build]
+    needs: [build]
     name: publish
     runs-on: ubuntu-latest
     steps:
