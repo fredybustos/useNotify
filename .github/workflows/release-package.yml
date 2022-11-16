@@ -5,26 +5,7 @@ on:
     types: [created]
 
 jobs:
-  build: 
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node_version: 16
-      - name: Install dependencies
-        run: npm ci
-      - name: Build
-        run: npm run build
-      - uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist
-
   release:
-    needs: [build]
     name: publish
     runs-on: ubuntu-latest
     steps:
