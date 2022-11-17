@@ -1,6 +1,6 @@
 {
   "name": "@fredybustos/usenotify",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "",
   "scripts": {
     "dev": "rollup -c -w",
