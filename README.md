@@ -102,7 +102,7 @@ As a component:
 
 **Options**
   - duration: is the time the notification is displayed, default is `5000`
-  - bgcolor: if you want to change the default bgcolor you can. The bgcolor depends on the `type` property.
+  - bgcolor: if you want to change the bgcolor by default, you can do it. The bgcolor depends on the `type` property.
   - color: change the text color.
   - position: it is possible to choose one of them: `top | topRight | topLeft | bottom | bottomRight | bottomLeft` by default is `top`
   - onClose: close notification and return `event`

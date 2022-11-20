@@ -1,6 +1,6 @@
 {
   "name": "@fredybustos/usenotify",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "",
   "scripts": {
     "dev": "rollup -c -w",
@@ -65,5 +65,16 @@
     "node_modules",
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "notification",
+    "notifications",
+    "useNotification",
+    "notify",
+    "useNotify",
+    "toast",
+    "useToast",
+    "alert"
+  ]
 }
