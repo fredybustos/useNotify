@@ -8,6 +8,7 @@ type CloseIconProps = {
 export default function CloseIcon({ onClick, color = '#fff' }: CloseIconProps) {
   return (
     <svg
+      data-testid="close-icon"
       fill="none"
       width="14"
       height="14"
