@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 
-import { NotifyInitialProps, Options, Position } from 'types'
-import Notification from 'components/notification'
+import { NotifyInitialProps, Options, Position } from '../../types'
+import Notification from '../notification'
 import '../../styles/notify.css'
 
 const defaultNotify = {

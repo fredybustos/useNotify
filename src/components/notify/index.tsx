@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import { NotifyProps, Options, NotifyInitialProps } from 'types'
-import Notifications from 'components/notifications'
-import { createContainer } from 'components/utils'
-import { DEAFAULT_DURATION } from 'components/utils/contants'
+import { NotifyProps, Options, NotifyInitialProps } from '../../types'
+import Notifications from '../notifications'
+import { createContainer } from '../utils'
+import { DEAFAULT_DURATION } from '../utils/contants'
 
 let notifyId = 0
 

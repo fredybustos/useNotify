@@ -3,8 +3,8 @@ import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
 import postcss from 'rollup-plugin-postcss'
-import babel from '@rollup/plugin-babel'
-import { terser } from 'rollup-plugin-terser'
+import terser from '@rollup/plugin-terser'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
 // eslint-disable-next-line
 const packageJson = require('./package.json')
@@ -25,21 +25,19 @@ export default [
       }
     ],
     plugins: [
+      peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({
-        tsconfig: './tsconfig.json'
-      }),
-      terser(),
+      typescript({ tsconfig: './tsconfig.json' }),
       postcss(),
-      babel({ babelHelpers: 'bundled', compact: true })
+      terser()
     ],
-    external: ['react', 'react-dom']
+    external: ['react', 'react-dom', 'styled-components']
   },
   {
-    input: 'dist/esm/src/index.d.ts',
+    input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
-    plugins: [dts()],
+    plugins: [dts.default()],
     external: [/.css$/]
   }
 ]

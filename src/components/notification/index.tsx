@@ -2,10 +2,10 @@ import React from 'react'
 import { createPortal } from 'react-dom'
 import { clsx } from 'clsx'
 
-import CloseIcon from 'components/closeIcon'
-import { DEFAULT_POSITION, POSITION, TYPE } from 'styles/utils'
-import { NotificationProps } from 'types'
-import useToast from 'hooks/useToast'
+import CloseIcon from '../closeIcon'
+import { DEFAULT_POSITION, POSITION, TYPE } from '../../styles/utils'
+import { NotificationProps } from '../../types'
+import useToast from '../../hooks/useToast'
 import '../../styles/notify.css'
 
 export default function Notification({

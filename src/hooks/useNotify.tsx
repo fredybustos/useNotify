@@ -1,4 +1,4 @@
-import { success, warn, error, info } from 'components/notify'
+import { success, warn, error, info } from '../components/notify'
 import { Options } from '../types'
 
 export const useNotify = () => {

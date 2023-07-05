@@ -1,4 +1,4 @@
-import { MARGIN } from 'components/utils/contants'
+import { MARGIN } from '../components/utils/contants'
 import { TypeName } from '../types'
 import './notify.css'
 
