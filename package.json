@@ -1,6 +1,6 @@
 {
   "name": "@fredybustos/usenotify",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description":  "React hook to show notifications",
   "scripts": {
     "dev": "rollup -c -w --bundleConfigAsCjs",
