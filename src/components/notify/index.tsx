@@ -36,16 +36,16 @@ const notify = ({ type, message, options }: NotifyProps) => {
 const Notify = ({ type, message, options }: NotifyProps) =>
   notify({ type, message, options })
 
-const success = (message: string, options: Options) =>
+const success = (message: string, options?: Options) =>
   notify({ type: 'success', message, options })
 
-const warn = (message: string, options: Options) =>
+const warn = (message: string, options?: Options) =>
   notify({ type: 'warning', message, options })
 
-const error = (message: string, options: Options) =>
+const error = (message: string, options?: Options) =>
   notify({ type: 'error', message, options })
 
-const info = (message: string, options: Options) =>
+const info = (message: string, options?: Options) =>
   notify({ type: 'information', message, options })
 
 export { success, warn, error, info, Notify }
