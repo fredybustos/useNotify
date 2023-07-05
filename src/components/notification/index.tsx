@@ -32,9 +32,9 @@ export default function Notification({
           style={{ ...animatedStyles, background: options?.bgcolor }}
           className={clsx([
             'notify-container',
-            { [POSITION[options?.position || 'top']]: open },
+            { [POSITION[options?.position || 'topRight']]: open },
             {
-              [DEFAULT_POSITION[options?.position || 'top']]: !open
+              [DEFAULT_POSITION[options?.position || 'topRight']]: !open
             }
           ])}
         >
@@ -46,9 +46,9 @@ export default function Notification({
           className={clsx([
             'notify-container',
             `${TYPE[type]}`,
-            { [POSITION[options?.position || 'top']]: open },
+            { [POSITION[options?.position || 'topRight']]: open },
             {
-              [DEFAULT_POSITION[options?.position || 'top']]: !open
+              [DEFAULT_POSITION[options?.position || 'topRight']]: !open
             }
           ])}
         >
