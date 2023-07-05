@@ -1,7 +1,7 @@
 import { CSSProperties, useEffect, useState } from 'react'
 
-import { Position, UseToastProps } from 'types'
-import { POSITION_STYLES, INITIAL_STYLES } from 'styles/utils'
+import { Position, UseToastProps } from '../types'
+import { POSITION_STYLES, INITIAL_STYLES } from '../styles/utils'
 import {
   MARGIN,
   ANIMATION_TIMER,
