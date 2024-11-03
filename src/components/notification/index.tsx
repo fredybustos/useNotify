@@ -15,14 +15,14 @@ export default function Notification({
   options,
   message,
   container,
-  setOpen
+  setOpen,
 }: NotificationProps) {
   const { animatedStyles, closeNotify } = useToast({
     setOpen,
     options,
     container,
     id,
-    open
+    open,
   })
 
   return createPortal(
@@ -34,8 +34,8 @@ export default function Notification({
             'notify-container',
             { [POSITION[options?.position || 'topRight']]: open },
             {
-              [DEFAULT_POSITION[options?.position || 'topRight']]: !open
-            }
+              [DEFAULT_POSITION[options?.position || 'topRight']]: !open,
+            },
           ])}
         >
           {options?.component({ message, type, options })}
@@ -48,8 +48,8 @@ export default function Notification({
             `${TYPE[type]}`,
             { [POSITION[options?.position || 'topRight']]: open },
             {
-              [DEFAULT_POSITION[options?.position || 'topRight']]: !open
-            }
+              [DEFAULT_POSITION[options?.position || 'topRight']]: !open,
+            },
           ])}
         >
           <div className="notify-body">

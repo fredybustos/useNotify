@@ -1,10 +1,9 @@
-import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
 import postcss from 'rollup-plugin-postcss'
-import terser from '@rollup/plugin-terser'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import esbuild from 'rollup-plugin-esbuild'
 
 // eslint-disable-next-line
 const packageJson = require('./package.json')
@@ -16,28 +15,29 @@ export default [
       {
         file: packageJson.main,
         format: 'cjs',
-        sourcemap: true
+        sourcemap: true,
       },
       {
         file: packageJson.module,
         format: 'esm',
-        sourcemap: true
-      }
+        sourcemap: true,
+      },
     ],
     plugins: [
-      peerDepsExternal(),
-      resolve(),
+      esbuild.default(),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
-      postcss(),
-      terser()
+      nodeResolve(),
+      peerDepsExternal(),
+      postcss({
+        minimize: true,
+      }),
     ],
-    external: ['react', 'react-dom', 'styled-components']
+    external: ['react', 'react-dom', 'styled-components'],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'src/index.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts.default()],
-    external: [/.css$/]
-  }
+    external: [/.css$/],
+  },
 ]

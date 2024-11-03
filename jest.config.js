@@ -1,7 +1,8 @@
 module.exports = {
-  testEnvironment: 'jsdom',
+  preset: 'ts-jest',
   moduleDirectories: ['node_modules', 'src'],
+  testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '.(css|less|scss|sass)$': 'identity-obj-proxy'
-  }
+    '.(css|less|scss)$': 'identity-obj-proxy',
+  },
 }

@@ -6,15 +6,15 @@ import Notifications from '../components/notifications'
 
 jest.mock('react-dom', () => ({
   ...jest.requireActual('react-dom'),
-  createPortal: (node: HTMLElement | null) => node
+  createPortal: (node: HTMLElement | null) => node,
 }))
 const props: NotifyProps = {
   type: 'success',
   message: 'Notification',
   options: {
     duration: 5000,
-    position: 'top'
-  }
+    position: 'top',
+  },
 }
 
 describe('Notify', () => {
@@ -25,7 +25,7 @@ describe('Notify', () => {
           message: '',
           options: undefined,
           type: 'success',
-          id: 0
+          id: 0,
         }}
         container={(<div>Notification</div>) as unknown as HTMLElement}
         openNotify={false}

@@ -1,13 +1,7 @@
 import React from 'react'
 
 export type TypeName = 'success' | 'error' | 'warning' | 'information'
-export type Position =
-  | 'top'
-  | 'topRight'
-  | 'topLeft'
-  | 'bottom'
-  | 'bottomRight'
-  | 'bottomLeft'
+export type Position = 'top' | 'topRight' | 'topLeft' | 'bottom' | 'bottomRight' | 'bottomLeft'
 
 export type OnNotify = {
   message: string
