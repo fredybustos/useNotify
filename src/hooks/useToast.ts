@@ -6,7 +6,7 @@ import {
   MARGIN,
   ANIMATION_TIMER,
   DEAFAULT_DURATION
-} from 'components/utils/contants'
+} from '../components/utils/contants'
 
 export default function useToast({
   setOpen,
