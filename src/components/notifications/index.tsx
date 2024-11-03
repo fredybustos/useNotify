@@ -10,17 +10,12 @@ const defaultNotify = {
   topLeft: [] as NotifyInitialProps['notification'][],
   bottom: [] as NotifyInitialProps['notification'][],
   bottomRight: [] as NotifyInitialProps['notification'][],
-  bottomLeft: [] as NotifyInitialProps['notification'][]
+  bottomLeft: [] as NotifyInitialProps['notification'][],
 }
 
-export default function Notifications({
-  notification,
-  container,
-  openNotify
-}: NotifyInitialProps) {
+export default function Notifications({ notification, container, openNotify }: NotifyInitialProps) {
   const [open, setOpen] = useState(false)
-  const [notifications, setNotifications] =
-    useState<typeof defaultNotify>(defaultNotify)
+  const [notifications, setNotifications] = useState<typeof defaultNotify>(defaultNotify)
 
   useEffect(() => {
     if (openNotify) {
@@ -30,12 +25,11 @@ export default function Notifications({
 
   useEffect(() => {
     if (notification) {
-      const position =
-        (notification.options?.position as Options['position']) || 'top'
+      const position = (notification.options?.position as Options['position']) || 'top'
       setNotifications(prevState => {
         return {
           ...prevState,
-          [position]: [...prevState[position], notification]
+          [position]: [...prevState[position], notification],
         }
       })
     }
@@ -47,7 +41,7 @@ export default function Notifications({
     'topLeft',
     'bottom',
     'bottomRight',
-    'bottomLeft'
+    'bottomLeft',
   ]
 
   return (

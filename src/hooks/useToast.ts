@@ -2,22 +2,12 @@ import { CSSProperties, useEffect, useState } from 'react'
 
 import { Position, UseToastProps } from '../types'
 import { POSITION_STYLES, INITIAL_STYLES } from '../styles/utils'
-import {
-  MARGIN,
-  ANIMATION_TIMER,
-  DEAFAULT_DURATION
-} from '../components/utils/contants'
+import { MARGIN, ANIMATION_TIMER, DEAFAULT_DURATION } from '../components/utils/contants'
 
-export default function useToast({
-  setOpen,
-  options,
-  container,
-  id,
-  open
-}: UseToastProps) {
+export default function useToast({ setOpen, options, container, id, open }: UseToastProps) {
   const [animatedStyles, setAnimatedStyles] = useState<CSSProperties>({
     opacity: 0,
-    [options?.position as string]: MARGIN * -1
+    [options?.position as string]: MARGIN * -1,
   })
 
   const duration = options?.duration ? options?.duration : DEAFAULT_DURATION
@@ -61,7 +51,7 @@ export default function useToast({
     const styles = INITIAL_STYLES[position](id, childRects)
     setAnimatedStyles({
       opacity: 0,
-      ...styles
+      ...styles,
     })
   }
 
