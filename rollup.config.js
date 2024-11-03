@@ -15,13 +15,13 @@ export default [
       {
         file: packageJson.main,
         format: 'cjs',
-        sourcemap: true
+        sourcemap: true,
       },
       {
         file: packageJson.module,
         format: 'esm',
-        sourcemap: true
-      }
+        sourcemap: true,
+      },
     ],
     plugins: [
       esbuild.default(),
@@ -32,12 +32,12 @@ export default [
         minimize: true,
       }),
     ],
-    external: ['react', 'react-dom', 'styled-components']
+    external: ['react', 'react-dom', 'styled-components'],
   },
   {
     input: 'src/index.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts.default()],
-    external: [/.css$/]
-  }
+    external: [/.css$/],
+  },
 ]
